@@ -13,15 +13,31 @@ function criptografar() {
     let res = document.getElementById("res")
     res.innerHTML = ""
 
-    if (alfabeto[name1] === undefined || alfabeto[subname] === undefined){
-        res.innerHTML = "Insira um valor Válido !"
-        res.style.color = 'red'
-    } else {
-        const resultadoElement = document.createElement('p'); // Cria um elemento <p>
-        resultadoElement.textContent = alfabeto[name1] + "" + alfabeto[subname];
-        res.appendChild(resultadoElement); // Adiciona o <p> à div res
-        res.style.color = 'black';
+    function converterTexto(texto) {
+        var resultado = ""
+        for (var i = 0; i < texto.length; i++) {
+            var letra = texto[i]
+            if (alfabeto[letra] !== undefined) {
+                resultado += alfabeto[letra] + ""
+            } else {
+                resultado += "? " // Caractere inválido
+            }
+        }
+        return resultado.trim()
     }
-}
 
+    // Verifica se os campos estão vazios
+    if (name1 === "" && subname === "") {
+        res.innerHTML = "Insira um valor válido!"
+        res.style.color = "red"
+    } else {
+        var resultadoName1 = converterTexto(name1)
+        var resultadoSubname = converterTexto(subname)
+
+        res.innerHTML = resultadoName1 + "" + resultadoSubname
+        res.style.color = "black"
+    }
+
+}
+//
 document.getElementById("but").addEventListener('click', criptografar)
