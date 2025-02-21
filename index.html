@@ -12,18 +12,21 @@
             <h1>CRIPTOGRAFADOR</h1>
             <form>
                 <label for="name1">Nome :</label><br>
-                <input type="text" id="name1" name="name1" placeholder="Digite seu Nome"><br>
+                <input type="text" id="name1" name="name1" maxlength="10" placeholder="Digite seu Nome"><br>
                 <label for="subname">Sobrenome :</label><br>
-                <input type="text" id="subname" name="subname" placeholder="Digite seu Sobrenome"><br>
-                <input type="submit" value="Criptografar">
-                <div id="res">
-
-                </div>          
+                <input type="text" id="subname" name="subname" maxlength="10" placeholder="Digite seu Sobrenome"><br>         
             </form>
+            <input type="submit" value="Criptografar" onclick="criptografar()" id="but">
+
+            <div id="res">
+            
+            </div>
         </div>
         <footer>
-            <a href="https://github.com/Crysthoferr">Crysthofer-Github.com</a>
+            <a href="https://github.com/Crysthoferr" target="_blank">Crysthofer Github.com</a>
         </footer>
     </div>
+    
+    <script src="script/script.js"></script>
 </body>
 </html>
