@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    min-width: 70vw;
+    min-width: 80vw;
     min-height: 70vh;
     background-color: rgba(128, 128, 128, 0.253);
     border-radius: 10px;
