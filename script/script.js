@@ -39,5 +39,5 @@ function criptografar() {
     }
 
 }
-//
+
 document.getElementById("but").addEventListener('click', criptografar)
