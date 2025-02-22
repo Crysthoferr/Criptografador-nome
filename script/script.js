@@ -14,27 +14,27 @@ function criptografar() {
     res.innerHTML = ""
 
     function converterTexto(texto) {
-        var resultado = ""
-        for (var i = 0; i < texto.length; i++) {
-            var letra = texto[i]
+        let resultado = ""
+        for (let i = 0; i < texto.length; i++) {
+            let letra = texto[i]
             if (alfabeto[letra] !== undefined) {
                 resultado += alfabeto[letra] + ""
             } else {
-                resultado += "? " // Caractere inválido
+                resultado += " ? " // Caractere inválido
             }
         }
         return resultado.trim()
     }
 
-    // Verifica se os campos estão vazios
+    
     if (name1 === "" && subname === "") {
         res.innerHTML = "Insira um valor válido!"
         res.style.color = "red"
     } else {
-        var resultadoName1 = converterTexto(name1)
-        var resultadoSubname = converterTexto(subname)
+        let resultadoName1 = converterTexto(name1)
+        let resultadoSubname = converterTexto(subname)
 
-        res.innerHTML = resultadoName1 + "" + resultadoSubname
+        res.innerHTML = resultadoName1 + "<br>" + resultadoSubname + "<br><br>" + "Nome Criptografado !"
         res.style.color = "black"
     }
 

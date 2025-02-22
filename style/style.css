@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -54,7 +54,7 @@ input[type="text"] {
     border: none;
     border-bottom: 1px solid black;
     outline: none;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     color: white;
 }
 
