@@ -35,7 +35,7 @@ function criptografar() {
         let resultadoSubname = converterTexto(subname)
 
         res.innerHTML = resultadoName1 + "<br>" + resultadoSubname + "<br><br>" + "Nome Criptografado !"
-        res.style.color = "black"
+        res.style.color = "yellow"
     }
 
 }
